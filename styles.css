@@ -406,6 +406,11 @@ h2 {
     text-decoration: none;
 }
 
+.footer-left p a{
+    text-decoration: none;
+    color: white;
+}
+
 .footer-right ul {
     list-style: none;
     padding: 0;
@@ -715,5 +720,118 @@ h2 {
 
     .payment-details {
         font-size: 0.95rem;
+    }
+}
+
+.stay-tuned-section {
+    height: 100vh;
+    /* background-color: #fff; optional: makes the glow pop more */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stay-tuned-section h1 {
+    font-size: 6rem;
+    color: orange;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Glowing animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black;
+    }
+
+    100% {
+        text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stay-tuned-section h1 {
+        font-size: 3rem;
+    }
+}
+
+.contact-section {
+    background-color: #f0f8ff;
+    /* light blue */
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.query-box {
+    background-color: #e0f0ff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.query-box p {
+    font-size: 1.1rem;
+    color: #004d99;
+}
+
+.query-box a {
+    color: #0077cc;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.coordinator-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.coordinator-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 260px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.coordinator-card h4 {
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.coordinator-card p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.coordinator-card a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.map-container {
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .coordinator-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coordinator-card {
+        width: 90%;
     }
 }
