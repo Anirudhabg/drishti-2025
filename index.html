@@ -12,6 +12,47 @@
         href="https://fonts.googleapis.com/css2?family=Butcherman&family=Megrim&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mystery+Quest&family=Nosifer&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Rubik+Glitch&family=Sedgwick+Ave+Display&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap"
         rel="stylesheet">
 
+    <style>
+        .main-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px auto;
+            flex-wrap: wrap;
+        }
+
+        .main-btn {
+            padding: 16px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s ease;
+            text-align: center;
+        }
+
+        .register-btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .register-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .main-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .main-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -38,7 +79,7 @@
             <a href="schedule.html">Schedule</a>
             <a href="speaker.html">Speaker</a>
             <a href="contact.html">Contact</a>
-            <a href="https://your-google-form-link" target="_blank">
+            <a href="https://forms.gle/hFWML8hfHybpcDEP7" target="_blank">
                 <button class="register-button">Register</button>
             </a>
         </div>
@@ -71,6 +112,11 @@
         <!-- Small Mandala (Opposite side)
         <img src="assets/images/abstract-decorative-mandala-line-art-white-background.png" alt="Mandala Art" class="mandala small"> -->
     </section>
+
+    <div class="main-buttons">
+        <a href="https://forms.gle/hFWML8hfHybpcDEP7" target="_blank" class="main-btn register-btn">Register Now</a>
+        <a href="assets/pdfs/Drishti_2025.pdf" target="_blank" class="main-btn register-btn">View Brochure</a>
+    </div>
 
     <section class="about-section" id="about">
         <h1>About Drishti 2025</h1>
@@ -159,9 +205,9 @@
                 <img src="assets/images/IMG_20250619_081015027_HDR_AE.jpg" alt="VCET Image 1" />
             </div>
             <div class="image-bottom">
-                <img src="assets/images/IMG_20250619_081015027_HDR_AE.jpg" alt="VCET Image 1" />
-                <img src="assets/images/IMG_20250619_081015027_HDR_AE.jpg" alt="VCET Image 1" />
-                <img src="assets/images/IMG_20250619_081015027_HDR_AE.jpg" alt="VCET Image 1" />
+                <img src="assets/images/MCA-2.JPG" alt="VCET Image 1" />
+                <!-- <img src="assets/images/MBA-1.JPG" alt="VCET Image 1" /> -->
+                <img src="assets/images/MBA-2.JPG" alt="VCET Image 1" />
 
             </div>
         </div>
@@ -173,8 +219,7 @@
         <div class="footer-left">
             <h4>Contact</h4>
             <p>Email: <a href="mailto:vcetdrishticonference@gmail.com">vcetdrishticonference@gmail.com</a></p>
-            <p>Phone: +91 9876543210</p>
-            <a href="https://your-google-form-link.com" target="_blank" class="register-btn">Register</a>
+            <a href="https://forms.gle/hFWML8hfHybpcDEP7" target="_blank" class="register-btn">Register</a>
         </div>
 
         <div class="footer-center">
