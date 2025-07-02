@@ -165,7 +165,7 @@ h2 {
     padding: 60px 20px;
     background-color: #fff;
     color: #000;
-    text-align: left;
+    text-align: justify;
 }
 
 .about-section h1 {
@@ -194,6 +194,7 @@ h2 {
 
 .about-section ul li {
     margin-bottom: 8px;
+    line-height: 1.7;
 }
 
 /* Marquee Styles */
@@ -214,7 +215,7 @@ h2 {
 
 .marquee-track img {
     width: 400px;
-    height: 130px;
+    height: 230px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
