@@ -142,7 +142,7 @@ h2 {
 }
 
 .organized {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.6;
     font-weight: 500;
 }
@@ -150,7 +150,7 @@ h2 {
 /* Mandala Positioning */
 .mandala {
     position: absolute;
-    opacity: 0.2;
+    opacity: 0.15;
     z-index: 1;
     pointer-events: none;
 }
