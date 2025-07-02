@@ -150,7 +150,7 @@ h2 {
 /* Mandala Positioning */
 .mandala {
     position: absolute;
-    opacity: 0.15;
+    opacity: 0.12;
     z-index: 1;
     pointer-events: none;
 }
