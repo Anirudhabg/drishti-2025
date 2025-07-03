@@ -4,17 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drishti 2025 - Speakers</title>
+    <title>Drishti 2025 - Schedule</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Butcherman&family=Megrim&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mystery+Quest&family=Nosifer&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Rubik+Glitch&family=Sedgwick+Ave+Display&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap"
         rel="stylesheet">
+
+    <style>
+        .glow-text {
+            font-size: 2.5rem;
+            color: #000;
+            font-weight: 800;
+            text-shadow:
+                0 0 5px orange,
+                0 0 10px orange,
+                0 0 20px orange,
+                0 0 40px orange;
+            animation: pulseGlow 2s infinite ease-in-out;
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                text-shadow:
+                    0 0 5px orange,
+                    0 0 10px orange,
+                    0 0 20px orange,
+                    0 0 40px orange;
+            }
+
+            50% {
+                text-shadow:
+                    0 0 10px rgb(255, 136, 0),
+                    0 0 20px #0ff,
+                    0 0 30px #0ff,
+                    0 0 60px #0ff;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
 
     <nav>
         <!-- Left: College Logo and Name -->
@@ -51,10 +84,35 @@
         </div>
     </nav>
 
+    <section class="hero" id="home">
+        <!-- Large Mandala (Left or Right) -->
+        <img src="assets/images/abstract-decorative-mandala-line-art-white-background.png" alt="Mandala Art"
+            class="mandala large">
 
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h2></h2>
+            <h1><br><span class="highlight">Conference Publication</span></h1>
+            <p class="tagline"></p>
+            <p class="organized">
+                All conference delegates have an opportunity to publish their papers in reputed Indexed Journals as per
+                the
+                journal's norms and fees notified by the publication house partnered with this conference.
+            </p>
+            
+            <h2 class="glow-text">Stay tuned for more updates</h2>
+
+        </div>
+
+    </section>
+
+    <!-- </div>
+    <h1>Conference Publication</h1>
+    <p>All conference delegates have an opportunity to publish their papers in reputed Indexed Journals as per the
+        journal's norms and fees notified by the publication house partnered with this conference.</p>
     <section class="stay-tuned-section">
         <h1>Will be Updated Soon...</h1>
-    </section>
+    </section> -->
 
 
 
@@ -68,7 +126,6 @@
         <div class="footer-center">
             <img src="assets/images/vcet-logo.png" alt="VCET Logo" class="vcet-logo">
             <p>&copy; 2025 VCET Puttur. All rights reserved.</p>
-
         </div>
 
         <div class="footer-right">
