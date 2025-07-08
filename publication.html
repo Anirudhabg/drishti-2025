@@ -14,14 +14,14 @@
 
     <style>
         .glow-text {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             color: #000;
             font-weight: 800;
-            text-shadow:
+            /* text-shadow:
                 0 0 5px orange,
                 0 0 10px orange,
                 0 0 20px orange,
-                0 0 40px orange;
+                0 0 40px orange; */
             animation: pulseGlow 2s infinite ease-in-out;
         }
 
@@ -38,7 +38,7 @@
 
             50% {
                 text-shadow:
-                    0 0 10px rgb(255, 136, 0),
+                    0 0 10px #0ff,
                     0 0 20px #0ff,
                     0 0 30px #0ff,
                     0 0 60px #0ff;
@@ -84,7 +84,7 @@
         </div>
     </nav>
 
-    <section class="hero" id="home">
+    <section class="hero" id="publication" style="height: auto;">
         <!-- Large Mandala (Left or Right) -->
         <img src="assets/images/abstract-decorative-mandala-line-art-white-background.png" alt="Mandala Art"
             class="mandala large">
@@ -94,13 +94,27 @@
             <h2></h2>
             <h1><br><span class="highlight">Conference Publication</span></h1>
             <p class="tagline"></p>
-            <p class="organized">
-                All conference delegates have an opportunity to publish their papers in reputed Indexed Journals as per
-                the
-                journal's norms and fees notified by the publication house partnered with this conference.
+            <h3 style="color: #000; font-size: 1.5rem;">
+                Partnered Journal:
+                <span style="color: #ff6600; font-weight: bold;" class="glow-text">
+                    International Journal of Scientific Research in Engineering and Management (IJSREM)
+                </span>
+            </h3>
+
+            <img src="assets/Logos/LOGO.png" alt="IJSREM Logo" style="max-width: 250px; margin: 20px 0;" />
+
+            <p style="color: #000; font-size: 16px; line-height: 1.6;">
+                <strong><a href="https://ijsrem.com/">IJSREM</a></strong> is one of the world’s leading and fastest-growing research publications with the
+                paramount objective of discovering advances by publishing insightful, double-blind, peer-reviewed
+                scientific journals.
             </p>
-            
-            <h2 class="glow-text">Stay tuned for more updates</h2>
+
+            <div style="margin-top: 20px; font-size: 16px; color: #000;">
+                <p><strong>SJIF Impact Factor:</strong> 8.586</p>
+                <p><strong>ISSN:</strong> 2582-3930</p>
+                <!-- <p><strong>Publisher Partnership:</strong> We are officially partnered with IJSREM for paper
+                    publications.</p> -->
+            </div>
 
         </div>
 
