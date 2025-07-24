@@ -11,6 +11,56 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Butcherman&family=Megrim&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mystery+Quest&family=Nosifer&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Rubik+Glitch&family=Sedgwick+Ave+Display&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap"
         rel="stylesheet">
+
+    <style>
+        .speaker-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .speaker-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #003366;
+        }
+
+        .speaker-name {
+            font-size: 24px;
+            font-weight: 600;
+            color: #003366;
+            margin: 10px 0 5px;
+        }
+
+        .speaker-designation {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .speaker-about {
+            font-size: 15px;
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .read-more {
+            color: #0077cc;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+    </style>
 </head>
 
 <body>
@@ -52,10 +102,82 @@
     </nav>
 
 
-    <section class="stay-tuned-section">
+    <!-- <section class="stay-tuned-section">
         <h1>Will be Updated Soon...</h1>
+    </section> -->
+
+    <section style="padding: 40px; background: #f0f2f5; height: auto;">
+        <div
+            style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1200px; margin: auto;">
+
+            <!-- Speaker 1 -->
+            <div class="speaker-card">
+                <div class="speaker-name" style="font-style: italic; color: orange;">Key Note Speaker 1</div>
+                <img src="assets/speakers/Dr.RajendraHegadi.jpeg" alt="Speaker 1" class="speaker-photo">
+                <div class="speaker-name">Dr. RAJENDRA HEGADI
+                </div>
+                <div class="speaker-designation">(IEEE Senior Member)
+                    Associate Professor, Data Science and Intelligent Systems
+                    Dean Academic and Student Affairs. IIIT Dharwad. </div>
+                <div class="speaker-about" id="about1">
+                    <p>
+                        Rajendra Hegadi has obtained his Master Degree M.Tech in Computer Science (from NITK
+                        Suratkal). His Ph.D is in Computer Science and Engineering(from MGRRI). He has secured GATE
+                        Scholarship for M.Tech program.
+                    </p> <span id="more1" style="display: none;">
+                        <p>He is an Associate Professor in the Department of Data Science and Intelligent Systems, and
+                            Dean (Academic & Student Affairs), Indian Institute of Information Technology Dharwad. Has
+                            more
+                            than
+                            26 years teaching experience in various capacities. He also worked as a System Analyst in a
+                            software
+                            organization and has undertaken many project consultancies.</p>
+                        <p> Currently has consultancy project “High level software architecture development to integrate
+                            healthcare applications” of Health and Family welfare Department, Government of Karnataka. A
+                            R&D
+                            Project “Autonomous Navigating Humanoid” under Technology Innovation Hub TiHAN-IIT Hyderabad
+                            and CDAC Hyderabad. Team member: Grant for 5G Labs setup at IIIT Dharwad, funded by Govt. of
+                            India.</p>
+                        <p>His areas of interest are cryptography & network security, blockchain, computer networks, and
+                            AI & ML. He is a senior member of IEEE, member EXCOM IEEE-CS Bangalore chapter (2021),
+                            member
+                            of CRSI, CSI and ISTE. Qualified GATE 97 and GATE 98, has earned GATE-98 Scholarship for his
+                            M.Tech Program.</p>
+                    </span>
+                    <span class="read-more" onclick="toggleMore('more1', this)">Read More</span>
+                </div>
+            </div>
+
+            <!-- Speaker 2 -->
+            <!-- <div class="speaker-card">
+                <img src="https://via.placeholder.com/150" alt="Speaker 2" class="speaker-photo">
+                <div class="speaker-name">Ms. Rina Verma</div>
+                <div class="speaker-designation">CTO, FutureTech Innovations</div>
+                <div class="speaker-about" id="about2">
+                    Rina Verma leads innovation in smart city technologies and digital transformation.
+                    <span id="more2" style="display: none;">
+                        Her work has impacted urban infrastructure in 10+ countries and earned multiple innovation
+                        awards.
+                    </span>
+                    <span class="read-more" onclick="toggleMore('more2', this)">Read More</span>
+                </div>
+            </div> -->
+
+        </div>
     </section>
 
+    <script>
+        function toggleMore(moreId, btn) {
+            const moreText = document.getElementById(moreId);
+            if (moreText.style.display === "none") {
+                moreText.style.display = "inline";
+                btn.textContent = "Read Less";
+            } else {
+                moreText.style.display = "none";
+                btn.textContent = "Read More";
+            }
+        }
+    </script>
 
 
     <footer class="footer">
