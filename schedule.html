@@ -14,17 +14,17 @@
 
     <style>
         .type--A {
-            --line_color: #555555;
+            --line_color: #1e1e2f;
             --back_color: orange;
         }
 
         .type--B {
-            --line_color: #1b1919;
+            --line_color: #1e1e2f;
             --back_color: orange;
         }
 
         .type--C {
-            --line_color: #00135c;
+            --line_color: #1e1e2f;
             --back_color: orange;
         }
 
@@ -32,11 +32,12 @@
             position: relative;
             z-index: 0;
             width: 70%;
-            height: 75px;
+            height: auto;
             text-decoration: none;
             font-size: 14px;
             font-weight: bold;
             color: var(--line_color);
+            padding: 12px 0;
             letter-spacing: 2px;
             transition: all 0.3s ease;
         }
@@ -48,6 +49,49 @@
             width: 100%;
             height: 100%;
         }
+
+        .button-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0 16px;
+            gap: 10px;
+            font-size: 14px;
+            flex-wrap: wrap;
+            /* allow wrapping when needed */
+        }
+
+
+        .button-content>div {
+            flex: 1 1 100%;
+            /* full width on small screens, 1:1:1 on large */
+            text-align: center;
+            white-space: normal;
+            overflow: visible;
+            text-overflow: unset;
+            word-wrap: break-word;
+            margin: 4px 0;
+        }
+
+
+
+        .time,
+        .schedule,
+        .venue {
+            font-weight: 700;
+            color: orange;
+        }
+
+        .schedule {
+            color: black;
+        }
+
+        .venue {
+            font-style: italic;
+            color: black;
+        }
+
 
         .button::before,
         .button::after,
@@ -100,7 +144,7 @@
             width: 150%;
             height: 100%;
             box-sizing: border-box;
-            border-radius: 300px;
+            border-radius: 24px 8px;
             border: solid 3px var(--line_color);
         }
 
@@ -112,10 +156,6 @@
         .button__line:nth-child(2),
         .button__line:nth-child(2)::before {
             right: 0;
-        }
-
-        .button:hover {
-            letter-spacing: 6px;
         }
 
         .button:hover::before,
@@ -311,6 +351,36 @@
         .button:not(:last-child) {
             margin-bottom: 64px;
         }
+
+        @media (max-width: 768px) {
+
+            .button:hover .button__drow1,
+            .button:hover .button__drow1::before,
+            .button:hover .button__drow1::after,
+            .button:hover .button__drow2,
+            .button:hover .button__drow2::before,
+            .button:hover .button__drow2::after {
+                animation: none !important;
+            }
+
+            .button {
+                transition: none !important;
+            }
+
+            .button::before,
+            .button::after,
+            .button__text::before,
+            .button__text::after {
+                transition: none !important;
+            }
+
+            .button:hover::before,
+            .button:hover .button__text::before,
+            .button:hover::after,
+            .button:hover .button__text::after {
+                width: unset !important;
+            }
+        }
     </style>
 </head>
 
@@ -361,7 +431,14 @@
         <a href="#" class="button type--C">
             <div class="button__line"></div>
             <div class="button__line"></div>
-            <span class="button__text">10:00 AM Inauguration</span>
+            <span class="button__text">
+                <div class="button-content">
+                    <div class="time">9:15 AM - 9:45 AM</div>
+                    <div class="schedule">Inauguration</div>
+                    <div class="venue">Sri Rama Sabhabhavana</div>
+                </div>
+            </span>
+
             <div class="button__drow1"></div>
             <div class="button__drow2"></div>
         </a>
@@ -369,7 +446,32 @@
         <a href="#" class="button type--C">
             <div class="button__line"></div>
             <div class="button__line"></div>
-            <span class="button__text">11:00 AM Key Note Address</span>
+            <span class="button__text">
+                <div class="button-content">
+                    <div class="time">9:45 AM - 10:00 AM</div>
+                    <div class="schedule">Tea Break</div>
+                    <div class="venue"></div>
+                </div>
+            </span>
+
+            <div class="button__drow1"></div>
+            <div class="button__drow2"></div>
+        </a>
+        <a href="#" class="button type--C">
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <span class="button__text">
+                <div class="button-content">
+                    <div class="time">10:00 AM - 10:30 AM</div>
+                    <div class="schedule">Keynote Address</div>
+                    <div class="venue"><strong style="color: red;">Contemporary Management Practices</strong> @ Chanakya
+                        Hall</div>
+                    <div class="venue"><strong style="color: red;">Advanced Technologies in Computing and
+                            Communications</strong> @ Sri Rama Sabhabhavana
+                    </div>
+                </div>
+            </span>
+
             <div class="button__drow1"></div>
             <div class="button__drow2"></div>
         </a>
@@ -377,7 +479,14 @@
         <a href="#" class="button type--C">
             <div class="button__line"></div>
             <div class="button__line"></div>
-            <span class="button__text">11:00 AM Key Note Address</span>
+            <span class="button__text">
+                <div class="button-content">
+                    <div class="time">10:30 AM - 12:30 PM</div>
+                    <div class="schedule">Paper presentation - Parallel Session</div>
+                    <div class="venue"></div>
+                </div>
+            </span>
+
             <div class="button__drow1"></div>
             <div class="button__drow2"></div>
         </a>
@@ -385,7 +494,14 @@
         <a href="#" class="button type--C">
             <div class="button__line"></div>
             <div class="button__line"></div>
-            <span class="button__text">11:00 AM Key Note Address</span>
+            <span class="button__text">
+                <div class="button-content">
+                    <div class="time">12:00 PM - 1:15 PM</div>
+                    <div class="schedule">Lunch Break</div>
+                    <div class="venue"></div>
+                </div>
+            </span>
+
             <div class="button__drow1"></div>
             <div class="button__drow2"></div>
         </a>
@@ -393,7 +509,29 @@
         <a href="#" class="button type--C">
             <div class="button__line"></div>
             <div class="button__line"></div>
-            <span class="button__text">11:00 AM Key Note Address</span>
+            <span class="button__text">
+                <div class="button-content">
+                    <div class="time">1:15 PM - 3:15 PM</div>
+                    <div class="schedule">Paper presentation - Parallel Session</div>
+                    <div class="venue"></div>
+                </div>
+            </span>
+
+            <div class="button__drow1"></div>
+            <div class="button__drow2"></div>
+        </a>
+
+        <a href="#" class="button type--C">
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <span class="button__text">
+                <div class="button-content">
+                    <div class="time">3:30 PM - 4:00 PM</div>
+                    <div class="schedule">Valedictory</div>
+                    <div class="venue">Sri Rama Sabhabhavana</div>
+                </div>
+            </span>
+
             <div class="button__drow1"></div>
             <div class="button__drow2"></div>
         </a>
