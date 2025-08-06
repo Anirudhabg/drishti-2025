@@ -12,64 +12,22 @@
         rel="stylesheet">
 
     <style>
-        body {
-            background-color: #000;
-            margin: 0;
-            height: 100vh;
+        .container {
+            position: relative;
+            height: 60vh;
             display: flex;
             justify-content: center;
             align-items: start;
-            overflow: hidden;
-            padding-top: 100px;
-        }
-
-        .container {
-            position: relative;
-            width: 300px;
-            height: 200px;
-        }
-
-        .container::after {
-            content: "";
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            backdrop-filter: blur(1em) brightness(6);
-            background-image: radial-gradient(circle at 50% 50%, #0000 0, #0000 2px, hsl(0 0% 4%) 2px);
-            background-size: 8px 8px;
-        }
-
-        /* Decorative background animation */
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background-image:
-                radial-gradient(4px 100px at 0px 235px, #09f, #0000),
-                radial-gradient(4px 100px at 300px 235px, #09f, #0000),
-                radial-gradient(1.5px 1.5px at 150px 117.5px, #09f 100%, #0000 150%);
-            background-size: 300px 300px;
-            animation: hi 100s linear infinite;
-            z-index: -2;
-        }
-
-        @keyframes hi {
-            from {
-                background-position: 0 0;
-            }
-
-            to {
-                background-position: 0 10000px;
-            }
+            padding-top: 50px;
         }
 
         .nail {
             width: 20px;
             height: 20px;
-            background-color: #fff;
+            background-color: #000;
             border-radius: 50%;
             position: absolute;
-            top: -30px;
+            top: 0;
             left: 50%;
             transform: translateX(-50%);
             z-index: 2;
@@ -77,19 +35,20 @@
 
         .rope {
             width: 2px;
-            height: 30px;
-            background-color: #fff;
+            height: 65px;
+            background-color: #000;
             position: absolute;
-            top: -10px;
+            top: 10px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 1;
         }
 
         .sign {
-            width: 300px;
+            width: 90%;
+            max-width: 300px;
             height: 150px;
-            background-color: #ffa500;
+            background-color: orange;
             color: white;
             font-size: 20px;
             font-weight: bold;
@@ -97,13 +56,18 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            border: 5px solid #fff;
+            border: 4px solid white;
             border-radius: 10px;
             position: relative;
             top: 30px;
             transform-origin: top center;
             animation: swing 1s ease-in-out infinite alternate;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .sign a {
+            color: white;
+            text-decoration: none;
         }
 
         @keyframes swing {
@@ -115,15 +79,85 @@
                 transform: rotate(5deg);
             }
         }
+
+        @media (max-width: 600px) {
+            .sign {
+                font-size: 16px;
+                height: 130px;
+            }
+
+            .rope {
+                height: 120px;
+            }
+        }
     </style>
 </head>
 
 <body>
+
+    <nav>
+        <!-- Left: College Logo and Name -->
+        <div class="nav-left">
+            <img src="assets/images/vcet-logo.png" alt="College Logo" />
+            <div class="college-name">
+                <div class="line1">Vivekananda</div>
+                <div class="line2">College of Engineering and Technology</div>
+            </div>
+        </div>
+
+        <!-- Hamburger Menu (Mobile) -->
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+        <!-- Center: Navigation Links -->
+        <div class="nav-center" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="index.html">About</a>
+            <a href="organizing-committee.html">Organizing Committee</a>
+            <a href="author-information.html">Author Information</a>
+            <a href="publication.html">Publication</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="speaker.html">Speaker</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://forms.gle/hFWML8hfHybpcDEP7" target="_blank">
+                <button class="register-button">Register</button>
+            </a>
+        </div>
+
+        <!-- Right: Drishti Logo and Name -->
+        <div class="nav-right">
+            <div class="drishti-name">Drishti 2025</div>
+            <img src="assets/images/33015771893.png" alt="Drishti Logo" />
+        </div>
+    </nav>
     <div class="container">
         <div class="nail"></div>
         <div class="rope"></div>
         <div class="sign"><a href="index.html" style="text-decoration: none;color: #fff;">Registration Closed</a></div>
     </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <h4>Contact</h4>
+            <p>Email: <a href="mailto:vcetdrishticonference@gmail.com">vcetdrishticonference@gmail.com</a></p>
+            <a href="https://forms.gle/hFWML8hfHybpcDEP7" target="_blank" class="register-btn">Register</a>
+        </div>
+
+        <div class="footer-center">
+            <img src="assets/images/vcet-logo.png" alt="VCET Logo" class="vcet-logo">
+            <p>&copy; 2025 VCET Puttur. All rights reserved.</p>
+        </div>
+
+        <div class="footer-right">
+            <h4>Previous Proceedings</h4>
+            <ul>
+                <li><a href="assets/pdfs/Proceedings_Drishti_2024.pdf" target="_blank">Drishti 2024</a></li>
+                <li><a href="assets/pdfs/Proceedings_Drishti_2023.pdf" target="_blank">Drishti 2023</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
